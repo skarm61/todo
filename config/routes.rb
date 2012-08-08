@@ -4,7 +4,7 @@ RailsApplication2::Application.routes.draw do
   resources :tasks, :only => [:create, :destroy]
   resources :emails
 
-  match '/signup',  :to => 'users#new'
+  match '/signup',  :to => 'users#new_test'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
 
