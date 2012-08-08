@@ -1,0 +1,11 @@
+<h1>Регистрация нового пользователя:</h1>
+
+<%= form_tag do  %>
+  <div class="field">
+    <label for="mail">Введите ваш адрес электронной почты:</label>
+    <%=text_field_tag :email, params[:email]%>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Sign up" %>
+  </div>
+<% end %>

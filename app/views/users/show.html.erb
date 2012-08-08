@@ -1,0 +1,22 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+      <%= render 'shared/task_form' %>
+      <% unless @user.tasks.empty? %>
+        <table class="tasks" summary="User tasks">
+          <%= render @tasks %>
+        </table>
+        <%= will_paginate @tasks %>
+      <% end %>
+    </td>
+    <td class="sidebar round">
+      <strong>Name</strong> <%= @user.name %><br />
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
+      <strong>Tasks</strong> <%= @user.tasks.count %>
+    </td>
+  </tr>
+</table>

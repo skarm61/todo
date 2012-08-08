@@ -27,7 +27,8 @@ group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
   gem 'sqlite3'
-  gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
+  gem 'sqlite3-ruby', '>= 1.3.3', :require => 'sqlite3'
+
 
 end
 
