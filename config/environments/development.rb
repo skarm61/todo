@@ -5,6 +5,8 @@ RailsApplication2::Application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
+  
+  config.action_mailer.default_url_options = { :host => "0.0.0.0:3000" }
 
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
@@ -17,15 +19,7 @@ RailsApplication2::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  :address              => "smtp.mail.com",
-  :port                 => 25,
-  :domain               => 'baci.lindsaar.net',
-  :user_name            => 'rails.test',
-  :password             => 'RailsTest',
-  :authentication       => 'plain',
-  :enable_starttls_auto => true  }
-  
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
   #config.action_mailer.server_settings=
   #{
    # :adress=>smtp.mail.ru,

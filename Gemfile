@@ -28,7 +28,7 @@ group :development do
   gem 'annotate', '2.4.0'
   gem 'sqlite3'
   gem 'sqlite3-ruby', '>= 1.3.3', :require => 'sqlite3'
-
+  #gem 'mailcatcher'
 
 end
 

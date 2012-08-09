@@ -37,6 +37,7 @@ class UsersController < ApplicationController
       redirect_to @user # Обработка успешного сохранения.
     else
       @title = "Sign up"
+      @user.email=params[:email]
       render 'new'
     end
   end
