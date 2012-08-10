@@ -7,9 +7,23 @@ RailsApplication2::Application.configure do
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  
+  
+  ActionMailer::Base.smtp_settings = {
+  :address  => "smtp.mail.ru",
+  :port  => 25,
+  :user_name  => "rails.test@mail.ru",
+  :password  => "RailsTest",
+  :authentication  => :login
+  } 
+  
+  
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
+  
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
