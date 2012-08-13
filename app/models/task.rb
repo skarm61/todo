@@ -1,7 +1,7 @@
 class Task < ActiveRecord::Base
   attr_accessible :content, :is_done
   
-  belongs_to :user
+  belongs_to :list
   
   validates :content, :presence => true, :length => { :maximum => 140 }
   validates :user_id, :presence => true

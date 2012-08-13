@@ -1,0 +1,9 @@
+<%= form_for @list do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.text_area :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Создать" %>
+  </div>
+<% end %>

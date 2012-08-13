@@ -6,8 +6,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @title =@user.name 
     @mail = @user.email     
-    @tasks = @user.tasks.paginate(:page => params[:page]) 
-    @task = Task.new
+    @lists = @user.lists.paginate(:page => params[:page]) 
+    @list = List.new
   end
 
   def new_test

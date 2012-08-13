@@ -5,18 +5,18 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <%= render 'shared/task_form' %>
-      <% unless @user.tasks.empty? %>
-        <table class="tasks" summary="User tasks">
-          <%= render @tasks %>
+      <%= render 'shared/list_form' %>
+      <% unless @user.lists.empty? %>
+        <table class="lists" summary="User lists">
+          <%= render @lists %>
         </table>
-        <%= will_paginate @tasks %>
+        <%= will_paginate @lists %>
       <% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
-      <strong>Tasks</strong> <%= @user.tasks.count %>
+      <strong>Lists</strong> <%= @user.lists.count %>
     </td>
   </tr>
 </table>

@@ -3,6 +3,7 @@ RailsApplication2::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   resources :tasks, :only => [:create, :destroy]
   resources :emails
+  resources :lists, :only => [:create]
   
 
   match '/signup',  :to => 'users#new_test'
