@@ -8,8 +8,8 @@ class ListsController < ApplicationController
   def show
     @title=params[:user_id]
     
-    #@user=current_user#User.Find(params[:user_id])
-    @list=@current_user.lists.Find(params[:list_id])
+    @user=User.find(params[:user_id])
+    @list=List.find(params[:list_id])
     if @list.nil?
       @title="sad"
     end
