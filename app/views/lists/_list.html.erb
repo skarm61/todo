@@ -1,6 +1,6 @@
 <tr>
   <td class="list"><br/>
-    <span class="content"><%= list.title %></span><br/>
+    <%=link_to list.title, list_path(:list_id=>list.id,:user_id=>current_user.id) %><br/>
     <span class="timestamp">
       Posted <%= time_ago_in_words(list.created_at) %> ago.
     </span>

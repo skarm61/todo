@@ -1,8 +1,20 @@
 class ListsController < ApplicationController
   before_filter :authenticate
 
-  def show
+  def index
 
+  end
+
+  def show
+    @title=params[:user_id]
+    
+    #@user=current_user#User.Find(params[:user_id])
+    @list=@current_user.lists.Find(params[:list_id])
+    if @list.nil?
+      @title="sad"
+    end
+    @tasks = @list.tasks.paginate(:page => params[:page]) 
+    @task=Task.new
   end
 
 
