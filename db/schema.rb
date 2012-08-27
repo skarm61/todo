@@ -11,9 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120804155748) do
+ActiveRecord::Schema.define(:version => 20120813143054) do
 
   create_table "emails", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "lists", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "title"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -22,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120804155748) do
     t.string   "content"
     t.integer  "user_id"
     t.boolean  "is_done"
+    t.integer  "list_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
