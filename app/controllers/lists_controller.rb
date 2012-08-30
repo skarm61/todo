@@ -19,31 +19,22 @@ class ListsController < ApplicationController
   end
 
   def show
-    @title=params[:user_id]
-    
-    @user=User.find(params[:user_id])
-    @list=List.find(params[:id])
-    
-    if @list.nil?
-      @title="sad"
-    end
-    @tasks = @list.tasks.paginate(:page => params[:page]) 
-    @task=Task.new
-    @task.content="sdd"
-    @task.list_id=params[:list_id]
+
   end
 
   def create
         @list  = current_user.lists.build(params[:list])
     if @list.save
       flash[:success] = "List created!"
-      redirect_to root_path
+      redirect_to url_for(:controller=>"lists",:action=>"index")
     else
       render 'pages/home'
     end
   end
   
   def destroy
+    @list.destroy
+    redirect_to url_for(:controller=>"lists",:action=>"index")
   end
   
 end

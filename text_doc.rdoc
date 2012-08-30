@@ -1,0 +1,31 @@
+
+  <div>
+  	<%=f.hidden_field :list_id%>
+  </div>
+
+    @list=List.find(params[:id])
+    @user=User.find(@list.user_id)
+    @title=@list.user_id
+    
+    
+    if @list.nil?
+      @title="sad"
+    end
+    @tasks = @list.tasks.paginate(:page => params[:page]) 
+    @task=Task.new
+    @task.content="sdd"
+    @task.list_id=params[:list_id]
+    
+
+	<%= render 'shared/task_form' %>
+	<% unless @list.tasks.empty? %>
+        <table class="tasks" summary="User tasks">
+          <%= render @tasks %>
+        </table>
+        <%= will_paginate @tasks %>
+      <% end %>
+
+
+Вопросы:
+метод Delete
+форма для Task

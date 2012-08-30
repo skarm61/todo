@@ -4,14 +4,13 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %><br/>        <br />
-      	<%=link_to url_for(:controller=>"lists",:action=>"index") %>
-      	<a href="/lists" >Списки</a>
+      	<%=link_to "Списки пользователя", url_for(:controller=>"lists",:action=>"index",:user_id=>@user.id) %>
       </h1>
     </td>
     <td class="sidebar round">
-      <strong>Name</strong> <%= @user.name %><br />
-      <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
-      <strong>Lists</strong> <%= @user.lists.count %>
+      <strong>Имя:</strong> <%= @user.name %><br />
+      <strong>ID пользователя:</strong>  <%=@user.id %><br />
+      <strong>Количество списков:</strong> <%= @user.lists.count %>
     </td>
   </tr>
 </table>
