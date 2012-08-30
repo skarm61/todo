@@ -1,5 +1,6 @@
 class Task < ActiveRecord::Base
   attr_accessible :content, :is_done
+  attr_accessor :list_id
   
   belongs_to :list
   

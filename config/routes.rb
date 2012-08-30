@@ -1,9 +1,16 @@
 RailsApplication2::Application.routes.draw do
-  resources :users  
-  resources :sessions, :only => [:new, :create, :destroy]
-  resources :tasks, :only => [:create, :destroy]
-  resources :emails
+  
+
+  resources :lists do
+    resources :tasks 
+  end
+    
+  resources :users
   resources :lists
+  
+  resources :sessions, :only => [:new, :create, :destroy]
+  #resources :tasks#, :only => [:create, :destroy]
+  resources :emails
   
 
   match '/signup',  :to => 'users#new_test'
@@ -19,6 +26,6 @@ RailsApplication2::Application.routes.draw do
   get "users/new"
   get "users/create/email"
   
-  get 'show_list' =>'lists#show', :as =>:list  
+  #get 'show_list' =>'lists#show', :as =>:list  
 
 end

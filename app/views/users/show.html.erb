@@ -3,15 +3,10 @@
     <td class="main">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @user.name %><br/>        <br />
+      	<%=link_to url_for(:controller=>"lists",:action=>"index") %>
+      	<a href="/lists" >Списки</a>
       </h1>
-      <%= render 'shared/list_form' %>
-      <% unless @user.lists.empty? %>
-        <table class="lists" summary="User lists">
-          <%= render @lists %>
-        </table>
-        <%= will_paginate @lists %>
-      <% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />

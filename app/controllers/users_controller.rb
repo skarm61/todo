@@ -5,10 +5,15 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @user_id=params[:id]
+    
+    if @user==current_user
+      @auth=true 
+    end
+    
     @title =@user.name 
     @mail = @user.email     
-    @lists = @user.lists.paginate(:page => params[:page]) 
-    @list = List.new
+    #@lists = @user.lists.paginate(:page => params[:page]) 
+    #@list = List.new
   end
 
   def new_test
