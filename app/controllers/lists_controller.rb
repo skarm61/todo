@@ -34,7 +34,7 @@ class ListsController < ApplicationController
   
   def destroy
     @list.destroy
-    redirect_to url_for(:controller=>"lists",:action=>"index")
+    redirect_to root_path #url_for(:controller=>"lists",:action=>"index")
   end
   
 end

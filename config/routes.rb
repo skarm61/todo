@@ -6,7 +6,7 @@ RailsApplication2::Application.routes.draw do
   end
     
   resources :users
-  resources :lists
+  #resources :lists
   
   resources :sessions, :only => [:new, :create, :destroy]
   #resources :tasks#, :only => [:create, :destroy]

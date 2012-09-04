@@ -2,7 +2,12 @@ class TasksController < ApplicationController
   before_filter :authenticate
 
   def create
-    @title="sss"
+    
+    @list= List.find(params[:list_id]) 
+      
+    @task=@list.tasks.create(params[:task])
+    @task.save!
+    redirect_to url_for(:controller=>"tasks",:action=>"index",:list_id=>params[:list_id])
   end
 
   def index
@@ -17,7 +22,7 @@ class TasksController < ApplicationController
     end  
     
     @tasks = @list.tasks.paginate(:page => params[:page]) 
-    @task = Task.new
+    @task = @list.tasks.build
     
   end
 

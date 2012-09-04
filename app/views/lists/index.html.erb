@@ -1,7 +1,7 @@
 	  <% unless @user.lists.empty? %>
         <table class="lists" summary="User lists">
           <%= render @lists %>
-        </table>
+                  </table>
         <%= will_paginate @lists %>
       <% end %>
       <%if @auth%>

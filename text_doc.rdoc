@@ -24,8 +24,7 @@
         </table>
         <%= will_paginate @tasks %>
       <% end %>
-
-
-Вопросы:
-метод Delete
-форма для Task
+      
+list_path(list, :method => :delete),
+                                     :confirm => "You sure?",
+                                     :title => list.title %>

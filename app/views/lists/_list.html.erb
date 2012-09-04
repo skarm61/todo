@@ -7,9 +7,7 @@
   </td>
   <% if current_user?(list.user) %>
   <td>
-    <%= link_to "delete", list,:action=>"destroy", :method => :delete,
-                                     :confirm => "You sure?",
-                                     :title => list.title %>
+    <%= link_to 'Destroy',list,:confirm=>'Вы уверены?',:method=>:delete %>
   </td>
   <% end %>
 </tr>
