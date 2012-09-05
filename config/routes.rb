@@ -16,7 +16,7 @@ RailsApplication2::Application.routes.draw do
   resources :emails
   
 
-  match '/signup',  :to => 'users#new_test'
+  match '/signup',  :to => 'users#new_user'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   match '/create',  :to=> 'users#create', :as => :create_user

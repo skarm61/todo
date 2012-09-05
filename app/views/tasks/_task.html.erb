@@ -3,7 +3,12 @@
   	<%if task.is_done%>
   	<%= link_to done, list_task_not_done_path(task.list,task),:method=>:post %>
   	<%else%>
-  	<%= link_to not_done, list_task_done_path(task.list,task),:method=>:post%>
+  	<%= link_to not_done, list_task_done_path(task.list,task),:method=>:post %>
+  	
+  	<%#form_remote_tag list_task_done_path(task.list,task),:method=>:post do%>
+	<%#=not_done%>
+  	<%#end%>
+  	
   	<%end%>
 	<span class="content"><%= task.content %></span>
     <%= link_to "delete",list_task_path(task.list,task),:method => :delete %>    

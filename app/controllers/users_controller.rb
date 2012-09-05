@@ -11,13 +11,19 @@ class UsersController < ApplicationController
      
   end
 
-  def new_test
+  def new_user
     @title = "Registering"
     if request.post? 
       Register.start_reg_email(params[:email]).deliver
       redirect_to root_path
     end    
     
+  end
+  
+  def new
+    @title = "Registering"
+    @user=User.new
+    @user.email=params[:email]
   end
   
   def has_password?(submitted_password)
@@ -29,6 +35,7 @@ class UsersController < ApplicationController
     return nil  if user.nil?
     return user if user.has_password?(submitted_password)
   end
+  
   
   def create
     @user = User.new(params[:user])
