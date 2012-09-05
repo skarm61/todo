@@ -1,6 +1,11 @@
 <tr>
   <td class="task">
-    <span class="content"><%= task.content %></span>
+  	<%if task.is_done%>
+  	<%= link_to done, list_task_not_done_path(task.list,task),:method=>:post %>
+  	<%else%>
+  	<%= link_to not_done, list_task_done_path(task.list,task),:method=>:post%>
+  	<%end%>
+	<span class="content"><%= task.content %></span>
     <%= link_to "delete",list_task_path(task.list,task),:method => :delete %>    
     <span class="timestamp">
       Posted <%= time_ago_in_words(task.created_at) %> ago.

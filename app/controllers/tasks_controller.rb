@@ -25,7 +25,21 @@ class TasksController < ApplicationController
     @task = @list.tasks.build
     
   end
+  
+  def done
+    @task=Task.find(params[:task_id])
+    @task.is_done=1
+    @task.save
+    redirect_to list_tasks_path(params[:list_id])
+  end
 
+  def not_done
+        @task=Task.find(params[:task_id])
+    @task.is_done=0
+    @task.save
+    redirect_to list_tasks_path(params[:list_id])
+  end
+  
   def destroy
     @task=Task.find(params[:id])
     @task.destroy

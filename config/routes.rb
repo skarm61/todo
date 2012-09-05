@@ -2,7 +2,10 @@ RailsApplication2::Application.routes.draw do
   
 
   resources :lists do
-    resources :tasks 
+    resources :tasks do
+      post 'done'
+      post 'not_done'
+    end
   end
     
   resources :users
