@@ -27,5 +27,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    @task=Task.find(params[:id])
+    @task.destroy
+    redirect_to url_for(:controller=>"tasks",:action=>"index",:list_id=>params[:list_id])
   end
 end

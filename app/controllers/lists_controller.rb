@@ -19,7 +19,6 @@ class ListsController < ApplicationController
   end
 
   def show
-
   end
 
   def create
@@ -33,8 +32,9 @@ class ListsController < ApplicationController
   end
   
   def destroy
+    @list=List.find(params[:id])
     @list.destroy
-    redirect_to root_path #url_for(:controller=>"lists",:action=>"index")
+    redirect_to root_path 
   end
-  
+    
 end

@@ -1,9 +1,9 @@
 <tr>
   <td class="task">
     <span class="content"><%= task.content %></span>
+    <%= link_to "delete",list_task_path(task.list,task),:method => :delete %>    
     <span class="timestamp">
       Posted <%= time_ago_in_words(task.created_at) %> ago.
     </span>
-    <%= link_to "delete",list_task_path(task.list,task),:http=>{:method => :delete} %>
   </td>
 </tr>
