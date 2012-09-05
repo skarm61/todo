@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     @user_id=params[:id]
         
     @title =@user.name 
-    @mail = @user.email     
+    @mail = @user.email    
+     
   end
 
   def new_test
