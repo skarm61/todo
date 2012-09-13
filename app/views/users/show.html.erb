@@ -11,6 +11,9 @@
       <strong>Имя:</strong> <%= @user.name %><br />
       <strong>ID пользователя:</strong>  <%=@user.id %><br />
       <strong>Количество списков:</strong> <%= @user.lists.count %>
+      <%if @user.id==current_user.id%>
+      <strong><%= link_to "Настройки профиля", edit_user_path(current_user) %></strong>
+      <%end%>
     </td>
   </tr>
 </table>

@@ -1,19 +1,30 @@
 <tr>
   <td class="task">
-  	<%if task.is_done%>
-  	<%= link_to done, list_task_not_done_path(task.list,task),:method=>:post %>
-  	<%else%>
-  	<%= link_to not_done, list_task_done_path(task.list,task),:method=>:post %>
+  
+  	<%if task.is_done-%>
+  	<span class="img_done">	<%=	if (current_user?task.list.user)
+  		link_to done, list_task_not_done_path(task.list,task),:method=>:post ,:class=>"done"
+  		else
+  		done
+  		end-%></span>
+  	<%else-%>
+  	<span class="img_done"><%= if (current_user?task.list.user)
+  		link_to not_done, list_task_done_path(task.list,task),:method=>:post, :class=>"done" 
+  		else
+  		not_done
+  		end-%></span>
   	
   	<%#form_remote_tag list_task_done_path(task.list,task),:method=>:post do%>
 	<%#=not_done%>
   	<%#end%>
   	
-  	<%end%>
-	<span class="content"><%= task.content %></span>
-    <%= link_to "delete",list_task_path(task.list,task),:method => :delete %>    
+  	<%end-%>
+	<span class="content"><%= task.content -%>   </span>	
+    	<%= if (current_user?task.list.user)
+    			link_to del,list_task_path(task.list,task),:method => :delete 
+  			end-%></span>    	
     <span class="timestamp">
-      Posted <%= time_ago_in_words(task.created_at) %> ago.
+      Posted <%= time_ago_in_words(task.created_at) -%> ago.
     </span>
   </td>
 </tr>

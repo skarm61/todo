@@ -1,13 +1,11 @@
 <header>
   <%= link_to logo, root_path %>
-  <nav class="round">
+  <nav>
     <ul>
-      <li><%= link_to "На главную", root_path %></li>
       <% if signed_in? %>
       <li><%= link_to "Профиль", current_user %></li>
-      <li><%= link_to "Настройки профиля", edit_user_path(current_user) %></li>
+      <li><%=link_to "Мои списки", lists_path %></li>
       <% end %>
-      <li><%= link_to "Помощь", help_path %></li>
       <% if signed_in? %>
       <li><%= link_to "Выйти", signout_path, :method => :delete %></li>
       <% else %>
