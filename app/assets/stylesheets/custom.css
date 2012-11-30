@@ -23,21 +23,60 @@ section {
 section h1 {
   font-size: 180%;
 }
+/*---------------------Layout table-------------------*/
 
-/* Links */
+th.left_panel
+{
+	background:Gainsboro;
+	width: 50mm;
+}
+div.left_panel
+{
+	height:100%;
+	width:100%;
+	background:#CC0000
+}
+
+
+th.main_layout_table
+{
+left: 50mm;
+right: 50mm;
+}
+
+th.right_panel
+{
+	height:100%;
+	width: 50mm;
+	right: 0;
+	background:Gainsboro;
+}
+div.right_panel
+{
+	height:100%;
+	width:100%;
+	background:#CC0000
+}
+
+table.main_layout_table
+{
+	height:100%;
+	width: 100%;
+}
+/*----------------------------Links---------------------*/
 
 a {
-  color: SlateGrey;
+  color: DimGray;
   text-decoration: none;
 }
 
 a:hover {
-  color: SlateGrey;
+  color: DimGray;
   text-decoration: underline;
 }
 
 a:visited {
-  color: SlateGrey;
+  color: DimGray;
 }
 
 /* Navigation */
@@ -69,7 +108,7 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color: SlateGrey;
+  color: DimGray;
 }
 
 nav ul li a:hover {
@@ -118,7 +157,6 @@ table.profile {
 }
 
 td.main {
-  /*width: 70%;*/
   padding: 1em;
 }
 
@@ -206,12 +244,11 @@ table.tasks tr td.micropost {
   padding-top: 10px;
 }
 
-table.tasks tr td.task span.timestamp {
+span.timestamp {
   display: block;
   font-size: 85%;
   color: #666;
 }
-
 div.user_info img {
   padding-right: 0.1em;
 }
