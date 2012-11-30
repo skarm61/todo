@@ -1,16 +1,25 @@
-<header>
-  <%= link_to logo, root_path %>
-  <nav>
-    <ul>
-      <% if signed_in? %>
-      <li><%= link_to "Профиль", current_user %></li>
-      <li><%=link_to "Мои списки", lists_path %></li>
-      <% end %>
-      <% if signed_in? %>
-      <li><%= link_to "Выйти", signout_path, :method => :delete %></li>
-      <% else %>
-      <li><%= link_to "Войти", signin_path %></li>
-      <% end %>
-    </ul>
-  </nav>
-</header>
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">TODO-list by Skarm</a>
+          <div class="container nav-collapse">
+          	<ul class="nav">
+			      <% if signed_in? %>
+			      <li><%= link_to "Профиль", current_user %></li>
+			      <li><%=link_to "Мои списки", lists_path %></li>
+			      <% end %>
+			      <% if signed_in? %>
+			      <li><%= link_to "Выйти", signout_path, :method => :delete %></li>
+			      <% else %>
+			      <li><%= link_to "Войти", signin_path %></li>
+			      <% end %>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
