@@ -8,7 +8,7 @@ class ListsController < ApplicationController
     else
        @user = User.find(params[:user_id])
     end
-    
+        
     if @user==current_user
       @auth=true 
     end
