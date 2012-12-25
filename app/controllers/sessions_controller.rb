@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   
   def new
     @title = "Sign in"
+    @hide_sidebar=true
   end
 
   def create

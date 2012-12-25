@@ -16,8 +16,7 @@ class UsersController < ApplicationController
     if request.post? 
       Register.start_reg_email(params[:email]).deliver
       redirect_to root_path
-    end    
-    
+    end      
   end
   
   def new

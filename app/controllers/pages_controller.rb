@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
 
   def home
+    @hide_sidebar=true
+    
     @title = "Home"    
     if signed_in?
       redirect_to current_user

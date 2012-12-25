@@ -1,9 +1,13 @@
+<div class="span8">
 	  <% unless @user.lists.empty? %>
         <table class="lists" summary="User lists">
           <%= render @lists %>
                   </table>
         <%= will_paginate @lists %>
       <% end %>
+      </div>
+      <div class="span4">
       <%if @auth%>
       	<%= render 'shared/list_form' %>
       <%end%>
+      </div>
