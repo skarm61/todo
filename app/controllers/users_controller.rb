@@ -1,12 +1,10 @@
 class UsersController < ApplicationController
   before_filter :authenticate, :only => [:edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
-               
-  def add_vk_acc
-
-  end               
+           
     
   def callback
+    #uid=8912155&first_name=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9&last_name=%D0%A1%D0%B0%D0%BF%D0%BE%D0%B6%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2&photo=http://cs421018.userapi.com/v421018155/109a/He9rhAlecUw.jpg&photo_rec=http://cs421018.userapi.com/v421018155/109e/OMIVe-AVV4s.jpg&hash=deb413bc14dace3d16ad68fca1a77299
     
     redirect_to root_url, alert: 'Error' and return if session[:state].present? && session[:state] != params[:state]    
     @vk = VkontakteApi.authorize(code: params[:code])

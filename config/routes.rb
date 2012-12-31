@@ -7,7 +7,8 @@ RailsApplication2::Application.routes.draw do
       post 'not_done'
     end
   end
-    
+  
+   
   resources :users do
     post 'add_vk_acc'
   end
@@ -30,7 +31,7 @@ RailsApplication2::Application.routes.draw do
     
   get "users/new"
   get "users/create/email"
-  get 'callback'  => 'users#callback'
+  get 'developers'  => 'users#callback'
   
   #get 'show_list' =>'lists#show', :as =>:list  
 
