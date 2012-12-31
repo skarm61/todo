@@ -1,6 +1,21 @@
 class UsersController < ApplicationController
   before_filter :authenticate, :only => [:edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
+               
+  def add_vk_acc
+
+  end               
+    
+  def callback
+    
+    redirect_to root_url, alert: 'Error' and return if session[:state].present? && session[:state] != params[:state]    
+    @vk = VkontakteApi.authorize(code: params[:code])
+    current_user.vk_token= @vk.token
+    current_user.vk_id = @vk.user_id    
+    
+    redirect_to current_user
+  end  
+               
                     
   def show
     @user = User.find(params[:id])
@@ -51,6 +66,15 @@ class UsersController < ApplicationController
   
   def edit
     @title = "Edit user"
+    #current_user.id_vk=8912155 
+    if current_user.id_vk.nil?
+      @vk=true
+      srand
+      session[:state] ||= Digest::MD5.hexdigest(rand.to_s)    
+      @vk_url = VkontakteApi.authorization_url(scope: [:friends, :groups, :offline, :notify], state: session[:state]) 
+    end
+    
+    
   end
   
   def update

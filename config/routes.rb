@@ -8,7 +8,9 @@ RailsApplication2::Application.routes.draw do
     end
   end
     
-  resources :users
+  resources :users do
+    post 'add_vk_acc'
+  end
   #resources :lists
   
   resources :sessions, :only => [:new, :create, :destroy]
@@ -28,6 +30,7 @@ RailsApplication2::Application.routes.draw do
     
   get "users/new"
   get "users/create/email"
+  get 'callback'  => 'users#callback'
   
   #get 'show_list' =>'lists#show', :as =>:list  
 

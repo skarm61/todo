@@ -3,11 +3,18 @@ class TasksController < ApplicationController
 
   def create
     
-    @list= List.find(params[:list_id]) 
-      
-    @task=@list.tasks.create(params[:task])
-    @task.save!
-    redirect_to url_for(:controller=>"tasks",:action=>"index",:list_id=>params[:list_id])
+    @list= List.find(params[:list_id])       
+    @task=@list.tasks.create(params[:task])    
+    
+    respond_to do |format|  
+      if @task.save        
+        format.js   
+        format.html {redirect_to list_tasks_path(params[:list_id])}
+      else        
+        format.js   
+        format.html {redirect_to list_tasks_path(params[:list_id])}
+      end
+    end 
   end
 
   def index
@@ -29,15 +36,26 @@ class TasksController < ApplicationController
   def done
     @task=Task.find(params[:task_id])
     @task.is_done=1
-    @task.save
-    redirect_to list_tasks_path(params[:list_id])
+    @task.save   
+    
+    respond_to do |format|  
+      format.js
+      format.html {redirect_to list_tasks_path(params[:list_id])}
+    end
+    
   end
 
   def not_done
-        @task=Task.find(params[:task_id])
+    @task=Task.find(params[:task_id])
     @task.is_done=0
     @task.save
-    redirect_to list_tasks_path(params[:list_id])
+    
+    
+    respond_to do |format|
+      format.js
+      format.html {redirect_to list_tasks_path(params[:list_id])}
+    end
+    
   end
   
   def destroy

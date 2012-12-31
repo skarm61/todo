@@ -1,24 +1,25 @@
 <tr>
-  <td class="task">
+  <td class="task" id=<%=task.id%>>
   
   	<%if task.is_done-%>
-  	<span class="img_done">	<%=	if (current_user?task.list.user)
-  		link_to done, list_task_not_done_path(task.list,task),:method=>:post ,:class=>"done"
+  	<span class="img_done">
+  		<%=	if (current_user?task.list.user)
+  			link_to done, list_task_not_done_path(task.list, task) ,:method=>:post ,:class=>"done", remote: true
   		else
-  		done
-  		end-%></span>
-  	<%else-%>
-  	<span class="img_done"><%= if (current_user?task.list.user)
-  		link_to not_done, list_task_done_path(task.list,task),:method=>:post, :class=>"done" 
+  			done
+  		end-%>
+  		</span>
+  		
+  	<%else-%>  	
+  	<span class="img_done">
+  		<%= if (current_user?task.list.user)
+  			link_to not_done, list_task_done_path(task.list, task),:method=>:post, :class=>"done", remote: true
   		else
-  		not_done
-  		end-%></span>
-  	
-  	<%#form_remote_tag list_task_done_path(task.list,task),:method=>:post do%>
-	<%#=not_done%>
-  	<%#end%>
-  	
+  			not_done
+  		end-%>
+  		</span>   	
   	<%end-%>
+  	
 	<span class="content"><%= task.content -%>   </span>	
     	<%= if (current_user?task.list.user)
     			link_to del,list_task_path(task.list,task),:method => :delete 
