@@ -1,8 +1,8 @@
 VkontakteApi.configure do |config|
   # Authorization parameters (not needed when using an external authorization):
-  config.app_id = '3329964'#ENV['APP_ID']
-  config.app_secret = 'uot1Y1vWBDhilquG9pnH'#ENV['APP_SECRET']
-  config.redirect_uri = "http://todo-skarm.herokuapp.com/callback" #ENV['REDIRECT_URI']
+  config.app_id = '3329964' #ENV['APP_ID']
+  config.app_secret = 'uot1Y1vWBDhilquG9pnH' #ENV['APP_SECRET']
+  config.redirect_uri ='http://todo-skarm.herokuapp.com/callback' #"http://109.87.116.232:3000/callback" #ENV['REDIRECT_URI']
   
   # Faraday adapter to make requests with:
   # config.adapter = :net_http

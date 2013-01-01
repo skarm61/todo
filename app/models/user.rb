@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :email, :name, :password, :password_confirmation, :vk_token, :second_name, :login, :url_for_vk_photo_medium, :id_vk
-  
+  attr_accessible :email, :name, :password, :password_confirmation, :vk_token, :second_name,  :login, :url_for_vk_photo_medium, :id_vk
+  attr_protected :id, :created_at, :updated_at, :encrypted_password, :salt
 
   has_many :lists, :dependent => :destroy
   

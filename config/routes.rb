@@ -31,7 +31,7 @@ RailsApplication2::Application.routes.draw do
     
   get "users/new"
   get "users/create/email"
-  get 'developers'  => 'users#callback'
+  get 'callback'  => 'users#callback'
   
   #get 'show_list' =>'lists#show', :as =>:list  
 

@@ -15,6 +15,12 @@
 				 alert('user '+data['uid']+' authorized');
 				} });
 				</script>
+				
+				<%=button_to 'Добавить аккаунт vk.com', @vk_url, :method=>:get%>
+				
+			<%end%><br />
+			<%if !@user_vk.nil?%>
+			<%=image_tag(@user_vk.photo_big,width:200)%>
 			<%end%>
 		</div>
 		<div class="span3">

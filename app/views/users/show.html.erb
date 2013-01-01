@@ -2,7 +2,9 @@
   <tr>
     <td class="main">
       <h1>
-        <%= gravatar_for @user %>
+      	<%if !@user.url_for_vk_photo_medium.nil?%>
+        <%=image_tag(@user.url_for_vk_photo_medium,width:100) %>
+        <%end%>
         <%= @user.name %><br/>        <br />
       	<%=link_to "Списки пользователя", url_for(:controller=>"lists",:action=>"index",:user_id=>@user.id) %>
       </h1>

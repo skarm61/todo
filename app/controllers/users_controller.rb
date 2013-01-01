@@ -6,10 +6,25 @@ class UsersController < ApplicationController
   def callback
     #uid=8912155&first_name=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9&last_name=%D0%A1%D0%B0%D0%BF%D0%BE%D0%B6%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2&photo=http://cs421018.userapi.com/v421018155/109a/He9rhAlecUw.jpg&photo_rec=http://cs421018.userapi.com/v421018155/109e/OMIVe-AVV4s.jpg&hash=deb413bc14dace3d16ad68fca1a77299
     
-    redirect_to root_url, alert: 'Error' and return if session[:state].present? && session[:state] != params[:state]    
+    #redirect_to root_url, alert: 'Error' and return if session[:state].present? && session[:state] != params[:state]    
     @vk = VkontakteApi.authorize(code: params[:code])
     current_user.vk_token= @vk.token
-    current_user.vk_id = @vk.user_id    
+    current_user.id_vk = @vk.user_id    
+    
+    @user=User.find(current_user.id)
+    @user.vk_token= @vk.token
+    @user.id_vk = @vk.user_id    
+    
+    #if @user.update_attributes(:vk_token => @vk.token, :id_vk=> @vk.user_id)
+    #if @user.update_attributes @user.attributes
+    #if @user.update_attribute(:vk_token,@vk.token) & @user.update_attribute(:id_vk,@vk.user_id)
+    #if @user.update_attributes(:vk_token , :id_vk, {@vk.token , @vk.user_id} )
+     # @fail="true"
+    #else
+    # @fail="fail"
+    #end
+    @user.update_attribute(:vk_token,@vk.token) 
+    @user.update_attribute(:id_vk,@vk.user_id)
     
     redirect_to current_user
   end  
@@ -47,8 +62,7 @@ class UsersController < ApplicationController
     return nil  if user.nil?
     return user if user.has_password?(submitted_password)
   end
-  
-  
+    
   def create
     @user = User.new(params[:user])
     if @user.save      
@@ -58,6 +72,7 @@ class UsersController < ApplicationController
     else
       @title = "Sign up"
       @user.email=params[:email]
+      
       render 'new'
     end
   end
@@ -69,10 +84,14 @@ class UsersController < ApplicationController
       @vk=true
       srand
       session[:state] ||= Digest::MD5.hexdigest(rand.to_s)    
-      @vk_url = VkontakteApi.authorization_url(scope: [:friends, :groups, :offline, :notify], state: session[:state]) 
+      @vk_url = VkontakteApi.authorization_url(scope: [:friends,:photos, :groups, :offline, :notify], state: session[:state]) 
+    end  
+    
+    if !current_user.vk_token.nil?
+    vk= VkontakteApi::Client.new(current_user.vk_token)
+    @user_vk = vk.users.get(uid: session[:vk_id], fields: [:screen_name, :photo_big]).first
+    @user.update_attribute(:url_for_vk_photo_medium,@user_vk.photo_big)
     end
-    
-    
   end
   
   def update
