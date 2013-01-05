@@ -13,6 +13,10 @@ gem 'will_paginate', '3.0.0'
 
 gem 'vkontakte_api', '~> 1.1'
 gem 'oj'
+gem 'haml-rails'
+gem 'erb2haml'
+#gem 'device'
+
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS

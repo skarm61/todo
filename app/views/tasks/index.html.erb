@@ -1,9 +1,0 @@
-	  <% unless @list.tasks.empty? %>
-        <table class="tasks" id="tasks_list">
-          <%= render @tasks %>
-        </table>
-        <%= will_paginate @tasks %>
-      <% end %>
-      <%if @auth%>
-      	<%= render 'shared/task_form' %>
-      <%end%>
