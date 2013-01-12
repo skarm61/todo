@@ -1,0 +1,12 @@
+%tr
+  %td.list
+    -if show_this_list?(list)
+      %br/
+      %span.content
+        = link_to list.title, list_tasks_path(list)
+      %br/
+      %span.timestamp
+        Posted #{time_ago_in_words(list.created_at)} ago.
+      - if current_user?(list.user)
+        %td
+          = link_to del,list_path(list),:confirm => "Вы уверены?",:method=>:delete

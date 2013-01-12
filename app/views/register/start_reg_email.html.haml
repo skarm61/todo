@@ -1,0 +1,8 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1 Welcom to TODO-list app!
+    %p Для продолжения регистрации, перейдите по ссылке:
+    = link_to "Продолжить регистрацию!", new_user_url(:email=>@mail)

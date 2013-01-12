@@ -1,0 +1,37 @@
+%h1 Редактирование профиля
+.container-fluid
+  .row-fluid
+    .span9
+      - if @vk
+        :javascript
+          VK.init({apiId: 3329964});
+        #vk_auth
+        :javascript
+          VK.Widgets.Auth("vk_auth", {width: "200px", onAuth: function(data) {
+           alert('user '+data['uid']+' authorized');
+          } });
+                  = button_to 'Добавить аккаунт vk.com', @vk_url, :method=>:get
+      %br/
+      - if !@user.url_for_vk_photo_medium.nil?
+        = image_tag(@user.url_for_vk_photo_medium,width:100)
+    .span3
+      = form_for(@user) do |f|
+        = render 'shared/error_messages', :object => f.object
+        .field
+          = f.label :name
+          %br/
+          = f.text_field :name
+        .field
+          = f.label :email
+          %br/
+          = f.text_field :email
+        .field
+          = f.label :password
+          %br/
+          = f.password_field :password
+        .field
+          = f.label :password_confirmation, "Confirmation"
+          %br/
+          = f.password_field :password_confirmation
+        .actions
+          = f.submit "Update"

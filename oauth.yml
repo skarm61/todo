@@ -1,0 +1,21 @@
+development: &defaults
+  :vkontakte:
+    :app_id: 3329964
+    :app_secret: uot1Y1vWBDhilquG9pnH
+    :app_permissions: "notify,wall,offline"
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  :vkontakte:
+    :app_id: 3329964
+    :app_secret: uot1Y1vWBDhilquG9pnH
+    :app_permissions: "notify,wall,offline"
+
+    OAUTH_CREDENTIALS_PATH = "#{ENV['HOME']}/mysite/oauth.yml"
+    OAUTH_CREDENTIALS = YAML.load_file(OAUTH_CREDENTIALS_PATH)[Rails.env]
