@@ -26,7 +26,13 @@ class TasksController < ApplicationController
     
     if @user==current_user
       @auth=true 
-    end  
+    end
+
+    if(@list.private)
+      if @auth!=true
+        redirect_back_or url_for(:controller=>"lists",:action=>"index",:user_id=>@user.id)
+      end
+    end
     
     @tasks = @list.tasks.paginate(:page => params[:page]) 
     @task = @list.tasks.build

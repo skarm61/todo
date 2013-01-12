@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121231182453) do
+ActiveRecord::Schema.define(:version => 20130112105647) do
 
   create_table "emails", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20121231182453) do
     t.string   "title"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "private"
   end
 
   create_table "tasks", :force => true do |t|

@@ -1,5 +1,5 @@
 class List < ActiveRecord::Base
-  attr_accessible :title
+  attr_accessible :title, :private
   
   belongs_to :user
   has_many :tasks, :dependent => :destroy
@@ -7,4 +7,6 @@ class List < ActiveRecord::Base
   validates :title, :presence => true, :length => { :within => 1..140} 
   
     default_scope :order => 'lists.created_at DESC'
+
+
 end

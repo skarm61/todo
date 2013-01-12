@@ -8,11 +8,13 @@ class ListsController < ApplicationController
     else
        @user = User.find(params[:user_id])
     end
-        
+
+
+
     if @user==current_user
-      @auth=true 
+      @auth=true
     end
-    
+
     @title ="Lists"
     @lists = @user.lists.paginate(:page => params[:page]) 
     @list = List.new
