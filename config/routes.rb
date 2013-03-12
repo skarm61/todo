@@ -7,7 +7,8 @@ RailsApplication2::Application.routes.draw do
       post 'not_done'
     end
   end
-  
+
+  resources :news
    
   resources :users do
     post 'add_vk_acc'

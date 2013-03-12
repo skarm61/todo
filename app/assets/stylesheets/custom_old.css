@@ -23,17 +23,6 @@ section h1 {
 }
 /*---------------------Layout table-------------------*/
 
-th.left_panel
-{
-	background:Gainsboro;
-	width: 50mm;
-}
-div.left_panel
-{
-	height:100%;
-	width:100%;
-	background:#CC0000
-}
 
 
 th.main_layout_table
@@ -42,6 +31,7 @@ left: 50mm;
 right: 50mm;
 }
 
+/*
 th.right_panel
 {
 	height:100%;
@@ -56,11 +46,14 @@ div.right_panel
 	background:#CC0000
 }
 
+
 table.main_layout_table
 {
 	height:100%;
 	width: 100%;
 }
+*/
+
 /*----------------------------Links---------------------*/
 
 a {

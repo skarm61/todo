@@ -15,12 +15,11 @@ gem 'vkontakte_api', '~> 1.1'
 gem 'oj'
 gem 'haml-rails'
 gem 'erb2haml'
-#gem 'device'
-
-
+gem 'devise'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -47,7 +46,6 @@ group :production do
   gem 'pg'
 end
 
-gem 'jquery-rails'
 group :test do
     gem 'factory_girl_rails', '1.0'
 end

@@ -16,10 +16,13 @@
     .container-fluid
       %hr/
       .row-fluid
-        .span2
-          = render 'layouts/left_panel'
-        .span10
-          = yield
+        - if signed_in?
+          .span2
+            = render 'layouts/left_panel'
+          .span10
+            = yield
+        -else
+          =yield
       = render 'layouts/footer'
     / Placed at the end of the document so the pages load faster
     = javascript_include_tag "application"

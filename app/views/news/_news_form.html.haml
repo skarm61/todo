@@ -1,0 +1,7 @@
+= form_for [@new] do |f|
+  .field
+    = f.text_field :header
+  .field
+    = f.text_area :content
+  .actions
+    = f.submit "Отправить"

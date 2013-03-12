@@ -1,14 +1,9 @@
 - if signed_in?
-  %table.front{:summary => "For signed-in users"}
-    %tr
-      %td.main
-        %h1.task What's up?
-        = render 'shared/task_form'
-        = render 'shared/feed'
-      %td.sidebar.round
-        = render 'shared/user_info'
+  = render 'pages/news'
 - else
-  %h1 TODO-list
-  %p
-    Простое приложение для создания и управления своими списками задач.
-  = link_to "Зарегестрируйтесь сейчас!", signup_path, :class => "signup_button round"
+  %h1.center TODO-list
+  %p.center Простое приложение для создания и управления своими списками задач.
+  .center
+    = button_to "Зарегестрируйтесь сейчас!", signup_path, :method => :get, :class => "btn btn-primary btn-large center"
+  %br
+  = render 'pages/news'

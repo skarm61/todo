@@ -1,0 +1,8 @@
+-if @news!=nil
+  %h3.center Last news of my project
+  -@news.each do |new|
+    .news
+      %h4 #{new.header}
+      = new.content
+  = will_paginate @news
+

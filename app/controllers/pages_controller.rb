@@ -2,13 +2,11 @@ class PagesController < ApplicationController
 
   def home
     @hide_sidebar=true
-    
-    @title = "Home"    
-    if signed_in?
-      redirect_to current_user
-      @task = Task.new
-      @feed_items = current_user.feed.paginate(:page => params[:page])
-    end
+    @title = "Home"
+
+    @news=New.paginate(:page => params[:page])
+    @new_new=New.new
+
   end
 
   def contact
