@@ -15,3 +15,12 @@
 {
     text-align: center;
 }
+
+.timespan{
+    font-size: 12px;
+    color: darkgray;
+}
+
+.image_link{
+    height: 24px;
+}

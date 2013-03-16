@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(:version => 20130312140319) do
     t.string   "second_name"
     t.string   "url_for_vk_photo_medium"
     t.string   "id_vk"
-    t.string   "is_admin"
+    t.boolean  "is_admin"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

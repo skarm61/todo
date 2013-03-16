@@ -1,7 +1,6 @@
 .span9
   - unless @user.lists.empty?
-    %table.lists{:summary => "User lists"}
-      = render @lists
+    = render @lists
     = will_paginate @lists
 .span2
   - if @auth

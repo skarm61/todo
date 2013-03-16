@@ -9,6 +9,7 @@ RailsApplication2::Application.routes.draw do
   end
 
   resources :news
+  resources :admin
    
   resources :users do
     post 'add_vk_acc'

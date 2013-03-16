@@ -1,8 +1,10 @@
 = form_for @list do |f|
   = render 'shared/error_messages', :object => f.object
+  %br/
   .field
-    = f.text_area :title
+    = f.text_area :title , class: "field_for_name_of_list"
   .field
     = f.check_box :private
+    Приватный
   .actions
     = f.submit "Создать"

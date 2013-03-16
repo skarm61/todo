@@ -1,0 +1,18 @@
+- if @task.is_done
+  %span.img_done
+    -if (current_user?@task.list.user)
+      =link_to done, list_task_not_done_path(@task.list,@task),:method=>:post ,:class=>"done", :remote=>true
+    -else
+      =done
+- else
+  %span.img_done
+    -if (current_user?@task.list.user)
+      =link_to not_done, list_task_done_path(@task.list,@task),:method=>:post, :class=>"done", :remote=>true
+    -else
+      =not_done
+%span.content
+  = @task.content
+- if (current_user?@task.list.user)
+  =link_to del,list_task_path(@task.list,@task),:method => :delete, :class=>'del_button'
+%span.timestamp
+  Posted #{time_ago_in_words(@task.created_at)} ago.

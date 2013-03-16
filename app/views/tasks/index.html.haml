@@ -1,7 +1,8 @@
 .span8
   - unless @list.tasks.empty?
-    = render @tasks
-    = will_paginate @tasks
+    #tasks_list
+      = render @tasks
+      = will_paginate @tasks
 .span4
   - if @auth
     = render 'shared/task_form'

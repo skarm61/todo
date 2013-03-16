@@ -9,8 +9,6 @@ class ListsController < ApplicationController
        @user = User.find(params[:user_id])
     end
 
-
-
     if @user==current_user
       @auth=true
     end
@@ -21,6 +19,29 @@ class ListsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+     @list=List.find(params[:id])
+     @title="Edit list"
+
+    if(@list.user.id!=current_user.id)
+      redirect_to root_path
+    end
+
+
+
+  end
+
+  def update
+    @list = List.find(params[:id])
+    if @list.update_attributes(params[:list])
+      flash[:success] = "Profile updated."
+      redirect_to lists_path
+    else
+      @title = "Edit list"
+      render 'edit'
+    end
   end
 
   def create

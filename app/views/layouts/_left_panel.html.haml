@@ -1,12 +1,15 @@
-- if @hide_sidebar!=true
-  .well.sidebar-nav
-    %ul.nav.nav-list
-      %li.nav-header Боковая панель
-      - if signed_in?
-        %li= link_to "Профиль", current_user
-        %li= link_to "Мои списки", lists_path
+.well.sidebar-nav
+  %ul.nav.nav-list
+    %li.nav-header Боковая панель
+    %li= link_to "Главная страница", root_path
+    - if signed_in?
+      %li= link_to "Профиль", current_user
+      %li= link_to "Мои списки", lists_path
+      %li.divider
+      -if current_user.is_admin
+        %li= link_to "Редактирование новостей", news_index_path
         %li.divider
-        %li= link_to "Выйти", signout_path, :method => :delete
+      %li= link_to "Выйти", signout_path, :method => :delete
       /
         <li class="active"><a href="#">Link</a></li>
         <li><a href="#">Link</a></li>

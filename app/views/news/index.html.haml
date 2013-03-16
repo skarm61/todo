@@ -1,0 +1,10 @@
+.span9
+  -if @news!=nil
+    -if @news.count!=0
+      -@news.each do |new|
+        .news
+          %h4 #{new.header}
+          = new.content
+      = will_paginate @news
+.span3
+  =render "news_form"
