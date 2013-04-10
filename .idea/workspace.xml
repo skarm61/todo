@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58163c51-703e-4458-94b9-c6f45d8a3ad2" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tasks/_task_for_ajax.html.haml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/lists/edit.html.haml" />
@@ -37,13 +38,26 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/tasks_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/tasks_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/todo_list.iml" afterPath="$PROJECT_DIR$/.idea/todo_list.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="todo_list.iws" />
     <ignored path=".idea/workspace.xml" />
+<<<<<<< HEAD
     <file path="/Dummy.txt" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363442982714" ignored="false" />
     <file path="/20130312135241_add_role_id_to_user.rb" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363191078083" ignored="false" />
     <file path="/user.rb" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363191420662" ignored="false" />
+=======
+    <file path="/Dummy.txt" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363542317797" ignored="false" />
+    <file path="/20130312135241_add_role_id_to_user.rb" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363096799115" ignored="false" />
+    <file path="/user.rb" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363096863886" ignored="false" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
     <file path="/20130312140319_create_news.rb" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363097026440" ignored="false" />
     <file path="/_news.html.haml" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363192844800" ignored="false" />
     <file path="/pages_controller.rb" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363097340120" ignored="false" />
@@ -52,6 +66,7 @@
     <file path="/_news_form.html.haml" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363098008838" ignored="false" />
     <file path="/home.html.haml" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363098259395" ignored="false" />
     <file path="/tasks.css.scss" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363098955048" ignored="false" />
+<<<<<<< HEAD
     <file path="/_left_panel.html.haml" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363436419967" ignored="false" />
     <file path="/admin_controller.rb" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363193545354" ignored="false" />
     <file path="/_list.html.haml" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363438360549" ignored="false" />
@@ -67,6 +82,9 @@
     <file path="/done.js.erb" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363439648560" ignored="false" />
     <file path="/index.html.haml" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363442390939" ignored="false" />
     <file path="/_task_form.html.haml" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363440037567" ignored="false" />
+=======
+    <file path="/.gitignore" changelist="58163c51-703e-4458-94b9-c6f45d8a3ad2" time="1363542069721" ignored="false" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,25 +135,43 @@
       <file leaf-file-name="news_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/news_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state line="8" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
+=======
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="lists_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/lists_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+=======
+      <file leaf-file-name="home.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pages/home.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="34" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="_news_form.html.haml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/news/_news_form.html.haml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="125" selection-start="132" selection-end="132" vertical-scroll-proportion="0.09966777">
+=======
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="41" selection-start="769" selection-end="769" vertical-scroll-proportion="0.17475729">
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
               <folding />
             </state>
           </provider>
@@ -176,10 +212,15 @@
         <option value="$PROJECT_DIR$/app/views/tasks/not_done.js.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/create.js.erb" />
         <option value="$PROJECT_DIR$/app/views/tasks/index.html.haml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/views/shared/_task_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/news/index.html.haml" />
         <option value="$PROJECT_DIR$/app/views/news/_news_form.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/news_controller.rb" />
+=======
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/tasks.css.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </list>
     </option>
   </component>
@@ -222,8 +263,11 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="RailsProjectView" />
+=======
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,7 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="todo_list" />
+              <option name="myItemId" value="todo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,7 +292,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="todo_list" />
+              <option name="myItemId" value="todo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -260,6 +304,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="todo_list" />
@@ -456,8 +501,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+=======
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,6 +516,11 @@
     <property name="recentsLimit" value="5" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
+<<<<<<< HEAD
+=======
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
@@ -674,6 +728,12 @@
       <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="false" name="test" type="RakeRunConfigurationType" factoryName="Rake">
       <module name="todo_list" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -863,14 +923,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="172" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31857452" sideWeight="0.49520767" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32971245" sideWeight="0.67062634" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16038339" sideWeight="0.21922246" order="1" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18171746" sideWeight="0.6715481" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32635984" sideWeight="0.998722" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17950138" sideWeight="0.67259413" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32619774" sideWeight="0.998722" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.49776357" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33995816" sideWeight="0.49776357" order="2" side_tool="false" content_ui="tabs" />
@@ -944,39 +1009,63 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lists.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="11" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_task_for_ajax.html.haml">
+=======
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="30" selection-start="607" selection-end="607" vertical-scroll-proportion="0.2901024" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/done.js.erb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="0" column="50" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0" />
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/_task.html.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="2" column="122" selection-start="74" selection-end="74" vertical-scroll-proportion="-1.25" />
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/not_done.js.erb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="0" column="57" selection-start="57" selection-end="57" vertical-scroll-proportion="0.0" />
+=======
+        <state line="1" column="12" selection-start="27" selection-end="27" vertical-scroll-proportion="0.026455026" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/create.js.erb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" />
+=======
+        <state line="6" column="84" selection-start="148" selection-end="148" vertical-scroll-proportion="0.15873016" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pages/_news.html.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="185" vertical-scroll-proportion="0.0" />
+=======
+        <state line="2" column="26" selection-start="60" selection-end="60" vertical-scroll-proportion="0.05076142" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
@@ -998,9 +1087,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/news_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="8" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+=======
+        <state line="8" column="4" selection-start="170" selection-end="170" vertical-scroll-proportion="0.19512194" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/news/index.html.haml">
@@ -1012,26 +1105,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/lists/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="6" column="33" selection-start="135" selection-end="135" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+=======
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_list_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="2" column="6" selection-start="86" selection-end="86" vertical-scroll-proportion="0.03322259" />
+=======
+        <state line="6" column="36" selection-start="135" selection-end="135" vertical-scroll-proportion="-3.75" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tasks/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="2" column="4" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+=======
+        <state line="53" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="0.65989846" />
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/news/_news_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="6" column="125" selection-start="132" selection-end="132" vertical-scroll-proportion="0.09966777">
+=======
+        <state line="9" column="34" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="41" selection-start="769" selection-end="769" vertical-scroll-proportion="0.17475729">
+>>>>>>> 7add5fa708ccc139c2f7773203d22669767d2210
           <folding />
         </state>
       </provider>
